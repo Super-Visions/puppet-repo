@@ -27,7 +27,7 @@
 class repo
 {
   anchor { 'repo::start': }->
-  class { 'repo::puppetlabs': }->
-  class { 'repo::epel': }~>
+  #class { 'repo::puppetlabs': }->
+  #class { 'repo::epel': }~>
   anchor { 'repo::end': }
 }
