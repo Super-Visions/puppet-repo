@@ -15,7 +15,7 @@ class repo::yum_conf (
 
   augeas {'yum.conf.main.proxy':
     context => "/files/etc/yum.conf/main",
-    changes => [ "${yum_proxy_action} proxy ${proto}://${host}:${port}", ],
+    changes => [ "${yum_proxy_action} proxy ${proxy_proto}://${proxy_host}:${proxy_port}", ],
   } 
 
 
