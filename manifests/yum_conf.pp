@@ -4,7 +4,7 @@ class repo::yum_conf (
   $proxy_proto = 'http', 
   $proxy_user = undef, 
   $proxy_pass = undef, 
-  proxy_ensure = 'present' 
+  $proxy_ensure = 'present' 
 ) {
 
   if $ensure == 'present' {
