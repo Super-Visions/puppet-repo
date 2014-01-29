@@ -7,7 +7,7 @@ class repo::yum_conf (
   $proxy_ensure = 'present' 
 ) {
 
-  if $ensure == 'present' {
+  if $proxy_ensure == 'present' {
     $yum_proxy_action = 'set'
   } else {
     $yum_proxy_action = 'rm'
