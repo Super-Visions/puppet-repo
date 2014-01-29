@@ -1,4 +1,6 @@
-class repo::epel {
+class repo::epel (
+  noproxy = true  
+){
   
   file{'/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6':
     ensure => present,
