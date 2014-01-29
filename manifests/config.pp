@@ -1,6 +1,6 @@
-class repo::config ( $proxyhost, $proxyport = 80, $proxyuser = undef, $proxypass = undef ) {
+class repo::config ( $proxyhost, $proxyport = 80, $proxyuser = undef, $proxypass = undef, $ensure = 'present' ) {
   file { '/etc/yum.conf':
-    ensure  => present,
+    ensure  => $ensure,
     content => template('repo/yum.conf.erb'),
   }
 }

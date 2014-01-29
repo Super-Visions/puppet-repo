@@ -1,0 +1,5 @@
+[elruby-replace-193]
+name="elruby replacement 1.9.3"
+baseurl="http://elruby.websages.com/replacement/1.9.3/$releasever/$basearch/"
+enabled=1
+gpgcheck=0
