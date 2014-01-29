@@ -1,5 +1,5 @@
 class repo::epel (
-  noproxy = true  
+  $noproxy = true  
 ){
   
   file{'/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6':
