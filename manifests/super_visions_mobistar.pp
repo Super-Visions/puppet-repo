@@ -1,4 +1,4 @@
-class repo::super-visions-mobistar {
+class repo::super_visions_mobistar {
   
   file{'/etc/yum.repos.d/super-visions-mobistar.repo':
     ensure => present,
