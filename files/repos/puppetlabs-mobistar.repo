@@ -1,0 +1,13 @@
+[puppetlabs-mobistar]
+name=puppetlabs
+baseurl=http://alien.host.mobistar.be/puppetlabs-el$releasever-$basearch/RPMS.products
+enabled=1
+gpgcheck=0
+proxy=_none_
+
+[puppetlabs-mobistar-dependencies]
+name=puppetlabs dependencies
+baseurl=http://alien.host.mobistar.be/puppetlabs-el$releasever-$basearch/RPMS.dependencies
+enabled=1
+gpgcheck=0
+proxy=_none_
