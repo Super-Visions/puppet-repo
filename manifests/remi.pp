@@ -1,4 +1,6 @@
-class repo::remi {
+class repo::remi (
+  $proxy = undef,
+) {
   
   file{'/etc/pki/rpm-gpg/RPM-GPG-KEY-remi':
     ensure => present,
@@ -7,7 +9,7 @@ class repo::remi {
 
   file{'/etc/yum.repos.d/remi.repo':
     ensure => present,
-    source => 'puppet:///modules/repo/repos/remi.repo',
+    content => template('repo/repos/remi.repo.erb'),
   }
 
 }

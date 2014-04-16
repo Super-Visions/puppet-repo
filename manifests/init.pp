@@ -24,8 +24,9 @@
 #
 # Copyright 2012 Super-Visions, unless otherwise noted.
 #
-class repo
-{
+class repo (
+  $proxy = undef,
+) {
   anchor { 'repo::start': }->
   #class { 'repo::puppetlabs': }->
   #class { 'repo::epel': }~>

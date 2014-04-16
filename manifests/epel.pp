@@ -1,6 +1,7 @@
 class repo::epel (
-  $noproxy = true  
-){
+  $noproxy = true,
+  $proxy = undef, 
+) {
   
   file{'/etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-6':
     ensure => present,
@@ -8,8 +9,8 @@ class repo::epel (
   }
 
   file{'/etc/yum.repos.d/epel.repo':
-    ensure => present,
-    source => 'puppet:///modules/repo/repos/epel.repo',
+    ensure  => present,
+    content => template('repo/repos/epel.repo.erb'),
   }
 
 }

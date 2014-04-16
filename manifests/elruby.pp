@@ -1,8 +1,10 @@
-class repo::elruby {
+class repo::elruby (
+  $proxy = undef,
+) {
   
   file{'/etc/yum.repos.d/elruby.repo':
     ensure => present,
-    source => 'puppet:///modules/repo/elruby.repo',
+    content => template('repo/repos/elruby.repo.erb'),
   }
 
 }

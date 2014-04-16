@@ -1,4 +1,6 @@
-class repo::rpmforge {
+class repo::rpmforge (
+  $proxy = undef,
+) {
   
   file{'/etc/pki/rpm-gpg/RPM-GPG-KEY-rpmforge-dag':
     ensure => present,
@@ -7,7 +9,7 @@ class repo::rpmforge {
 
   file{'/etc/yum.repos.d/rpmforge.repo':
     ensure => present,
-    source => 'puppet:///modules/repo/repos/rpmforge.repo',
+    content => template('repo/repos/rpmforge.repo.erb'),
   }
 
 }
