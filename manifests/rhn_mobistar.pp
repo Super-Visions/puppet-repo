@@ -1,7 +1,9 @@
-class repo::rhn_mobistar {
-  
+class repo::rhn_mobistar  (
+  $ensure = 'present',
+  ){
+
   file{'/etc/yum.repos.d/rhn-mobistar.repo':
-    ensure => present,
+    ensure => $ensure,
     source => 'puppet:///modules/repo/repos/rhn-mobistar.repo',
   }
 
