@@ -10,9 +10,11 @@ class repo::epel (
     }
     '5': {
       $keyfile = 'RPM-GPG-KEY-EPEL'
+      $template = 'repo/repos/epel5.repo.erb'
     }
     default: {
       $keyfile = "RPM-GPG-KEY-EPEL-${::os_maj_version}"
+      $template = 'repo/repos/epel.repo.erb'
     }
   }
 
@@ -23,7 +25,7 @@ class repo::epel (
 
   file{'/etc/yum.repos.d/epel.repo':
     ensure  => $ensure,
-    content => template('repo/repos/epel.repo.erb'),
+    content => template($template),
   }
 
 }
