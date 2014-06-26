@@ -8,7 +8,7 @@ class repo::puppetlabs_mobistar (
     source => 'puppet:///modules/repo/keys/RPM-GPG-KEY-puppetlabs',
   }
 
-  file{'/etc/yum.repos.d/puppetlabs.repo':
+  file{'/etc/yum.repos.d/puppetlabs-mobistar.repo':
     ensure => $ensure,
     content => template('repo/repos/puppetlabs-mobistar.repo.erb'),
   }
