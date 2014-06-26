@@ -1,6 +1,6 @@
 [puppetlabs]
 name=puppetlabs
-baseurl=http://yum.puppetlabs.com/el/$releasever/products/$basearch
+baseurl=<%= @baseurl %>
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
@@ -9,7 +9,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
 
 [puppetlabs-deps]
 name=puppetlabs dependencies
-baseurl=http://yum.puppetlabs.com/el/$releasever/dependencies/$basearch
+baseurl=<%= @baseurl %>
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs
