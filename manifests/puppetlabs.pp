@@ -14,4 +14,8 @@ class repo::puppetlabs (
     content => template('repo/repos/puppetlabs.repo.erb'),
   }
 
+  file{'/etc/yum.repos.d/puppetlabs-mobistar.repo':
+    ensure => absent,
+  }
+  
 }
