@@ -1,7 +1,8 @@
 class repo::puppetlabs (
   $proxy = undef,
   $ensure = 'present',
-  $baseurl = 'http://yum.puppetlabs.com/el/$releasever/products/$basearch',
+  $products_baseurl = 'http://yum.puppetlabs.com/el/$releasever/products/$basearch',
+  $deps_baseurl = 'http://yum.puppetlabs.com/el/$releasever/dependencies/$basearch',
 ) {
 
   file{'/etc/pki/rpm-gpg/RPM-GPG-KEY-puppetlabs':
@@ -17,5 +18,5 @@ class repo::puppetlabs (
   file{'/etc/yum.repos.d/puppetlabs-mobistar.repo':
     ensure => absent,
   }
-  
+
 }
