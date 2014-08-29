@@ -1,0 +1,23 @@
+[super-visions-mobistar-custom]
+name=super-visions-custom
+baseurl=http://alien.host.mobistar.be/super-visions-\$releasever-\$basearch/RPMS.custom
+enabled=1
+gpgcheck=0
+<% if @proxy %>proxy=<%= @proxy %>
+<% end -%>
+
+[super-visions-mobistar-epel]
+name=super-visions-epel
+baseurl=http://alien.host.mobistar.be/super-visions-\$releasever-\$basearch/RPMS.epel
+enabled=1
+gpgcheck=0
+<% if @proxy %>proxy=<%= @proxy %>
+<% end -%>
+
+[super-visions-mobistar-other]
+name=super-visions-other
+baseurl=http://alien.host.mobistar.be/super-visions-\$releasever-\$basearch/RPMS.other
+enabled=1
+gpgcheck=0
+<% if @proxy %>proxy=<%= @proxy %>
+<% end -%>
