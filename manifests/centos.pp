@@ -7,7 +7,7 @@ class repo::centos  (
 
   file{"/etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-${::operatingsystemmajrelease}":
     ensure => $ensure,
-    source => 'puppet:///modules/repo/keys/RPM-GPG-KEY-CentOS-${::operatingsystemmajrelease}',
+    source => "puppet:///modules/repo/keys/RPM-GPG-KEY-CentOS-${::operatingsystemmajrelease}",
   }
 
   file{'/etc/yum.repos.d/CentOS-Base.repo':
