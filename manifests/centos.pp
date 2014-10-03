@@ -10,9 +10,9 @@ class repo::centos  (
     source => 'puppet:///modules/repo/keys/RPM-GPG-KEY-CentOS-${::operatingsystemmajrelease}',
   }
 
-  file{'/etc/yum.repos.d/centos.repo':
+  file{'/etc/yum.repos.d/CentOS-Base.repo':
     ensure  => $ensure,
-    content => template('repo/repos/centos.repo.erb'),
+    content => template('repo/repos/CentOS-Base.repo.erb'),
   }
 
 }
