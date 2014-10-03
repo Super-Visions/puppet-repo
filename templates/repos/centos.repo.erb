@@ -1,0 +1,44 @@
+[base]
+name=CentOS-$releasever - Base
+baseurl=http://alien.host.mobistar.be/centos-$releasever-$basearch/RPMS.os
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+<% if @proxy %>proxy=<%= @proxy %>
+<% end -%>
+
+#released updates
+[updates]
+name=CentOS-$releasever - Updates
+baseurl=http://alien.host.mobistar.be/centos-$releasever-$basearch/RPMS.updates
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+<% if @proxy %>proxy=<%= @proxy %>
+<% end -%>
+
+#packages used/produced in the build but not released
+[addons]
+name=CentOS-$releasever - Addons
+baseurl=http://alien.host.mobistar.be/centos-$releasever-$basearch/RPMS.addons
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+<% if @proxy %>proxy=<%= @proxy %>
+<% end -%>
+
+#additional packages that may be useful
+[extras]
+name=CentOS-$releasever - Extras
+baseurl=http://alien.host.mobistar.be/centos-$releasever-$basearch/RPMS.extras
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+<% if @proxy %>proxy=<%= @proxy %>
+<% end -%>
+
+#additional packages that extend functionality of existing packages
+[centosplus]
+name=CentOS-$releasever - Plus
+baseurl=http://alien.host.mobistar.be/centos-$releasever-$basearch/RPMS.centosplus
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-$releasever
+<% if @proxy %>proxy=<%= @proxy %>
+<% end -%>
