@@ -1,33 +1,10 @@
 
 [epel]
 name=Extra Packages for Enterprise Linux <%= @os_maj_version %> - $basearch
-#baseurl=http://download.fedoraproject.org/pub/epel/<%= @os_maj_version %>/$basearch
-mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-<%= @os_maj_version %>&arch=$basearch
+baseurl=http://alien.host.mobistar.be/<%= @os_maj_version %>/$basearch
 failovermethod=priority
 enabled=1
 gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/<%= @keyfile %>
-<% if @proxy %>proxy=<%= @proxy %>
-<% end -%>
-
-[epel-debuginfo]
-name=Extra Packages for Enterprise Linux <%= @os_maj_version %> - $basearch - Debug
-#baseurl=http://download.fedoraproject.org/pub/epel/<%= @os_maj_version %>/$basearch/debug
-mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-debug-<%= @os_maj_version %>&arch=$basearch
-failovermethod=priority
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/<%= @keyfile %>
-gpgcheck=1
-<% if @proxy %>proxy=<%= @proxy %>
-<% end -%>
-
-[epel-source]
-name=Extra Packages for Enterprise Linux <%= @os_maj_version %> - $basearch - Source
-#baseurl=http://download.fedoraproject.org/pub/epel/<%= @os_maj_version %>/SRPMS
-mirrorlist=https://mirrors.fedoraproject.org/metalink?repo=epel-source-<%= @os_maj_version %>&arch=$basearch
-failovermethod=priority
-enabled=0
-gpgkey=file:///etc/pki/rpm-gpg/<%= @keyfile %>
-gpgcheck=1
 <% if @proxy %>proxy=<%= @proxy %>
 <% end -%>
