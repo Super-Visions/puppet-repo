@@ -1,7 +1,7 @@
 
 [epel]
 name=Extra Packages for Enterprise Linux <%= @os_maj_version %> - $basearch
-baseurl=http://alien.host.mobistar.be/<%= @os_maj_version %>/$basearch
+baseurl=http://alien.host.mobistar.be/epel-<%= @os_maj_version %>-$basearch/RPMS.epel/
 failovermethod=priority
 enabled=1
 gpgcheck=1
