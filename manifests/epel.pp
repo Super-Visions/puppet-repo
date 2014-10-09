@@ -8,10 +8,10 @@ class repo::epel (
     '4': {
       fail( 'Version 4 not supported!')
     }
-    '5': {
-      $keyfile = 'RPM-GPG-KEY-EPEL'
-      $template = 'repo/repos/epel5.repo.erb'
-    }
+    # '5': {
+    #   $keyfile = 'RPM-GPG-KEY-EPEL'
+    #   $template = 'repo/repos/epel5.repo.erb'
+    # }
     default: {
       $keyfile = "RPM-GPG-KEY-EPEL-${::os_maj_version}"
       $template = 'repo/repos/epel.repo.erb'
